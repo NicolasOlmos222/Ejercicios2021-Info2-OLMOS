@@ -2,23 +2,23 @@
   Debe pedir al usuario que primero ingrese los números que desea uno a uno. 
   Cuando haya ingresado los números deseados debe ingresar la letra P, para así proceder al cálculo.*/
 #include <stdio.h>
-  
-char valor;
-int numeros = 0;
+#include <stdlib.h>
+
+char valor = 0;
+float resultado = 0;
+int contador = 0;
   
 int main(){
-	printf("Ingrese los numeros que se desee, al finalizar ingrese P.\n");
-	
-	while(1){
-		printf ("Ingrese un valor: ");
-		valor = getc(stdin);
-		if(valor != 'p' && valor != 'P'){
-			numeros += (valor - '0');
-			printf("%d", numeros);
-		}else break;
-		//putc (valor, stdout);
-	}
-	printf("%d", numeros);
-	
-	return(0);
+while(1){
+	printf("Ingrese un numero (Para finalizar envie P): ");
+	scanf("%s", &valor);
+	if(valor == 'p'){
+		resultado = resultado/contador;
+		contador = 0;
+		break;
+	}else resultado += (valor-48);
+	contador++;
+}
+printf ("El resultado es: %f", resultado);
+return 0;
 }
