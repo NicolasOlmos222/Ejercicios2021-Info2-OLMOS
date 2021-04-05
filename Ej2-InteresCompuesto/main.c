@@ -10,7 +10,7 @@ double principal = 1000.0;
 double tasa[5] = {.05, .06, .08, .09, .10};
 int anio;
 int i;
-
+//PROBANDO LINUX
 int main(){
 	for(i = 0; i <= 4;i++){
 		printf("Tasa del %0.0f: \n", tasa[i]*100.0);
