@@ -60,20 +60,20 @@ void cicloA(){
 void cicloB(){
     switch(cuenta){
     case 0:
-      digitalWrite(PIN_LED0, HIGH);
-      digitalWrite(PIN_LED1, LOW);
-      digitalWrite(PIN_LED2, LOW);
-      cuenta++;
-    break;
-    case 1:
       digitalWrite(PIN_LED0, LOW);
       digitalWrite(PIN_LED1, LOW);
       digitalWrite(PIN_LED2, HIGH);
       cuenta++;
     break;
-    case 3:
+    case 1:
       digitalWrite(PIN_LED0, LOW);
       digitalWrite(PIN_LED1, HIGH);
+      digitalWrite(PIN_LED2, LOW);
+      cuenta++;
+    break;
+    case 3:
+      digitalWrite(PIN_LED0, HIGH);
+      digitalWrite(PIN_LED1, LOW);
       digitalWrite(PIN_LED2, LOW);
       cuenta = 0;
     break;
